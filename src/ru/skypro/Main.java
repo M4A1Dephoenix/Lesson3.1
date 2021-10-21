@@ -7,28 +7,26 @@ public class Main {
         System.out.println("Задание №1");
         System.out.println("");
         int clientOS = 1;
-        if (clientOS == 0)
+        if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        else
+        }
+        else {
             System.out.println("Установите версию приложения для Android по ссылке");
+        }
 
         // Задание №2
         System.out.println();
         System.out.println("Задание №2");
-        var clientDeviceYear = 2015;
+        int clientDeviceYear = 2015;
         if (clientOS ==0)
         {
-            if (clientDeviceYear <2015)
-            {
+            if (clientDeviceYear <2015) {
                 System.out.println("«Установите облегченную версию приложения для iOS по ссылке».");
             }
-            else
-            {
+            else {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             }
-        }
-        else
-        {
+        } else {
             if (clientDeviceYear <2015)
             {
                 System.out.println("«Установите облегченную версию приложения для Android по ссылке».");
@@ -41,12 +39,11 @@ public class Main {
         // Задание №3
         System.out.println();
         System.out.println("Задание №3");
-        var year = 1902;
-        if (year % 400 == 0)
-        {
+        ////////////////////////////////////////////////////////////////////////////////////
+        int year = 1902;
+        if (year % 400 == 0) {
             System.out.println(year + " Год является високосным");
-        } else if (year % 100 == 0)
-        {
+        } else if (year % 100 == 0) {
             System.out.println(year + " Год не является високосным");
         }
         else if (year % 4 == 0 )
@@ -58,32 +55,27 @@ public class Main {
 
         System.out.println();
         System.out.println("Задание №4");
-        int deliveryDistance = 95;
+        /*int deliveryDistance = 95;
         int timeDelivery = ((deliveryDistance + 19) / 40) + 1;
         System.out.println("Потребуется дней: " + timeDelivery);
-        /*
-        var deliveryDistance = 95;
-        var time = 1;
-        if (deliveryDistance <=20)
-        {
-            System.out.println("Потребуется дней "+ time);
-        }
-        else if (deliveryDistance>20 && deliveryDistance<=60)
-        {
-            time += 1;
-            System.out.println("Потребуется дней "+ time);
-        }
-        else if (deliveryDistance>60 && deliveryDistance<=100)
-        {
-            time += 2;
-            System.out.println("Потребуется дней "+ time);
-        }
         */
+        var deliveryDistance = 95;
+        var time = 0;
+        if (deliveryDistance <=20) {
+            time = 1;
+        }
+        else if (deliveryDistance>20 && deliveryDistance<=60) {
+            time += 1;
+        }
+        else if (deliveryDistance<=100) {
+            time += 2;
+        }
+        System.out.println("Потребуется дней "+ time);
+
         System.out.println();
         System.out.println("Задание №5");
         var monthNumber = 12;
-        switch (monthNumber)
-        {
+        switch (monthNumber) {
             case 1:
             case 2:
             case 12:
@@ -106,8 +98,6 @@ public class Main {
                 break;
             default:
                 System.out.println("Месяцев только 12");
-
-
         }
         // Задание №6
         System.out.println();
@@ -115,28 +105,21 @@ public class Main {
         // Переделать ............if..............
         var age = 19;
         int salary = 58_000;
+        var k = 0;
         if ( age>= 23 ){
-            if (salary >= 50_000 && salary < 80_000) {
-                salary = salary * 3 + salary * 6 / 5;
-            }
-            else if (salary >= 80_000){
-                salary = salary * 3 + salary * 3 / 2;
-            }
-            else
-                salary = salary * 3;
-
-
+            k = 3;
         }
-        else if (age < 23)
-        {
-            if (salary >= 50_000 && salary < 80_000) {
-                salary = salary * 2 + salary * 6 / 5;
-            }
-            else if (salary >= 80_000){
-                salary= salary * 2 + salary * 3 / 2;
-            }
-            else
-                salary = salary * 2;
+        else if (age < 23){
+            k=2;
+        }
+        if (salary >= 50_000 && salary < 80_000) {
+            salary = salary * k + salary * 6 / 5;
+        }
+        else if (salary >= 80_000){
+            salary = salary * k + salary * 3 / 2;
+        }
+        else {
+            salary = salary * 3;
         }
         System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + salary + " рублей");
 
@@ -167,11 +150,11 @@ public class Main {
         // System.out.println(bid7);
         // System.out.println(wantedSum7);
 
-        if (wantedSum7 / 12 < maxBid7)
-            System.out.println( "Максимальный платеж при ЗП " + salary7 + " равен " + maxBid7 + " рублей. Платеж по кредиту " + iniSum7 + " рублей. Одобрено");
-        else
-            System.out.println( "Максимальный платеж при ЗП " + salary7 + " равен " + maxBid7 + " рублей. Платеж по кредиту " + iniSum7 + " рублей. Отказано");
-
-    }
+        if (wantedSum7 / 12 < maxBid7) {
+            System.out.println("Максимальный платеж при ЗП " + salary7 + " равен " + maxBid7 + " рублей. Платеж по кредиту " + iniSum7 + " рублей. Одобрено");
+        }
+            else {
+            System.out.println("Максимальный платеж при ЗП " + salary7 + " равен " + maxBid7 + " рублей. Платеж по кредиту " + iniSum7 + " рублей. Отказано");
+        }
     }
 }
