@@ -59,8 +59,8 @@ public class Main {
         int timeDelivery = ((deliveryDistance + 19) / 40) + 1;
         System.out.println("Потребуется дней: " + timeDelivery);
         */
-        var deliveryDistance = 95;
-        var time = 0;
+        int deliveryDistance = 95;
+        int time = 0;
         if (deliveryDistance <=20) {
             time = 1;
         }
@@ -74,7 +74,7 @@ public class Main {
 
         System.out.println();
         System.out.println("Задание №5");
-        var monthNumber = 12;
+        int monthNumber = 12;
         switch (monthNumber) {
             case 1:
             case 2:
@@ -103,9 +103,9 @@ public class Main {
         System.out.println();
         System.out.println("Задание №6");
         // Переделать ............if..............
-        var age = 19;
+        int age = 19;
         int salary = 58_000;
-        var k = 0;
+        int k = 0;
         if ( age>= 23 ){
             k = 3;
         }
@@ -126,13 +126,13 @@ public class Main {
         // Задача №7
         System.out.println();
         System.out.println("Задача №7");
-        var age7 = 25;
-        var salary7 = 60_000;
+        int age7 = 25;
+        int salary7 = 60_000;
         double wantedSum7 = 330_000;
         double iniSum7 = wantedSum7;
         double bid7 = 10;
-        var time7 = 12;
-        var maxBid7 = salary7 / 2;
+        int time7 = 12;
+        int maxBid7 = salary7 / 2;
         if (age7 < 23)
         {
             bid7+= 1;
